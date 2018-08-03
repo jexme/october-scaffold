@@ -1,0 +1,43 @@
+<?php namespace {{studly_author}}\{{studly_plugin}}\Models;
+
+use Model;
+
+/**
+ * {{name}} Model
+ */
+class {{studly_name}} extends Model
+{
+    public $implement = ['Jexme.Cache.Behaviors.CacheModel'];
+
+    use \October\Rain\Database\Traits\Validation;
+    use \October\Rain\Database\Traits\Sortable;
+    use \October\Rain\Database\Traits\SoftDelete;
+//  use \October\Rain\Database\Traits\Sluggable;
+//  use \October\Rain\Database\Traits\NestedTree;
+
+    public $table = '{{lower_author}}_{{lower_plugin}}_{{snake_plural_name}}';
+
+    public $rules = [];
+
+    public $attributeNames = [];
+
+    protected $guarded = ['*'];
+
+    protected $fillable = [];
+
+    protected $dates = [ 'deleted_at' ];
+
+    protected $jsonable = [];
+
+//  protected $slugs = [ 'slug' => 'title' ];
+
+    public $hasOne = [];
+    public $hasMany = [];
+    public $belongsTo = [];
+    public $belongsToMany = [];
+    public $morphTo = [];
+    public $morphOne = [];
+    public $morphMany = [];
+    public $attachOne = [];
+    public $attachMany = [];
+}

@@ -1,0 +1,15 @@
+{
+  "name": "jexme/october-scaffold",
+  "license": "GPL-3.0",
+  "description": "Перевод на русский язык. Создание контроллеров и моделей",
+  "require": {
+    "php": "^7.0",
+    "jexme/october-cache": "^1.0",
+    "jexme/october-duplicate": "^1.0"
+  },
+  "autoload-dev": {
+    "files": [
+      "Plugin.php"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+#scopes:
+#
+#    category:
+#        label: Category
+#        modelClass: {{studly_author}}\{{studly_plugin}}\Models\Category
+#        conditions: category_id in (:filtered)
+#        nameFrom: name
+#
+#    status:
+#        label: Status
+#        type: group
+#        conditions: status in (:filtered)
+#        options:
+#            pending: Pending
+#            active: Active
+#            closed: Closed
+#
+#    published:
+#        label: Hide published
+#        type: checkbox
+#        default: 1
+#        conditions: is_published <> true
+#
+#    approved:
+#        label: Approved
+#        type: switch
+#        default: 2
+#        conditions:
+#            - is_approved <> true
+#            - is_approved = true
+#
+#    created_at:
+#        label: Date
+#        type: date
+#        conditions: created_at >= ':filtered'
+#
+#    published_at:
+#        label: Date
+#        type: daterange
+#        conditions: created_at >= ':after' AND created_at <= ':before'
