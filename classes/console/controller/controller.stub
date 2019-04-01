@@ -1,24 +1,25 @@
-<?php namespace {{studly_author}}\{{studly_plugin}}\Controllers;
+<?php
 
-use BackendMenu;
+namespace {{studly_author}}\{{studly_plugin}}\Controllers;
+
+use Backend\Facades\BackendMenu;
 use Backend\Classes\Controller;
 
-/**
- * {{title_name}} Back-end Controller
- */
 class {{studly_name}} extends Controller
 {
-    use \Jexme\Duplicate\Traits\Duplicate;
+    protected $requiredPermissions = ['{{lower_author}}.{{lower_plugin}}.{{lower_name}}'];
 
     public $implement = [
         'Backend.Behaviors.FormController',
         'Backend.Behaviors.ListController',
-        'Jexme.Cache.Behaviors.CacheReorderController',
+        'Backend.Behaviors.ReorderController',
+        // 'Backend.Behaviors.RelationController',
     ];
 
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
     public $reorderConfig = 'config_reorder.yaml';
+    // public $relationConfig = 'config_relation.yaml';
 
     public function __construct()
     {

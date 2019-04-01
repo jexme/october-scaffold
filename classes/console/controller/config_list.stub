@@ -9,7 +9,7 @@ list: $/{{lower_author}}/{{lower_plugin}}/models/{{lower_model}}/columns.yaml
 modelClass: {{studly_author}}\{{studly_plugin}}\Models\{{studly_model}}
 
 # List Title
-title: Управление
+title: {{lower_author}}.{{lower_plugin}}::lang.{{snake_plural_name}}.title
 
 # Link URL for each record
 recordUrl: {{lower_author}}/{{lower_plugin}}/{{lower_name}}/update/:id
@@ -29,15 +29,17 @@ showSetup: true
 # Displays the sorting link on each column
 showSorting: true
 
-filter: config_filter.yaml
+showTree: false
 
 # Default sorting column
 defaultSort:
-    column: created_at
+    column: id
     direction: desc
 
 # Display checkboxes next to each record
 showCheckboxes: true
+
+filter: config_filter.yaml
 
 # Toolbar widget configuration
 toolbar:

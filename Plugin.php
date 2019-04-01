@@ -1,24 +1,14 @@
-<?php namespace Jexme\Scaffold;
+<?php
 
-use Carbon\Carbon;
+namespace Jexme\Scaffold;
+
 use Illuminate\Support\Facades\App;
 use System\Classes\PluginBase;
 
 class Plugin extends PluginBase
 {
-    public function pluginDetails()
+    public function register()
     {
-        return [
-            'name'        => 'scaffold',
-            'description' => 'No description provided yet...',
-            'author'      => 'jexme',
-            'icon'        => 'icon-leaf'
-        ];
-    }
-
-    public function boot()
-    {
-        Carbon::setLocale(config('app.locale'));
-        App::register('\Jexme\Scaffold\Classes\ScaffoldServiceProvider');
+        App::register(Classes\ScaffoldServiceProvider::class);
     }
 }

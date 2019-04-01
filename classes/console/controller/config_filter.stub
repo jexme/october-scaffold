@@ -3,10 +3,9 @@
 # ===================================
 
 #scopes:
-#
 #    category:
 #        label: Category
-#        modelClass: {{studly_author}}\{{studly_plugin}}\Models\Category
+#        modelClass: {{studly_author}}\{{studly_plugin}}\Models\{{studly_name}}
 #        conditions: category_id in (:filtered)
 #        nameFrom: name
 #
@@ -23,7 +22,7 @@
 #        label: Hide published
 #        type: checkbox
 #        default: 1
-#        conditions: is_published <> true
+#        conditions: is_published <> false
 #
 #    approved:
 #        label: Approved
@@ -42,3 +41,4 @@
 #        label: Date
 #        type: daterange
 #        conditions: created_at >= ':after' AND created_at <= ':before'
+#

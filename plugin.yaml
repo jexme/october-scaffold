@@ -1,0 +1,6 @@
+plugin:
+    name: 'jexme.scaffold::lang.plugin.name'
+    description: 'jexme.scaffold::lang.plugin.description'
+    author: jexme
+    icon: oc-icon-tasks
+    homepage: ''

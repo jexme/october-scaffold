@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('{{lower_author}}/{{lower_plugin}}/{{lower_name}}') ?>">Записи</a></li>
+        <li><a href="<?= Backend::url('{{lower_author}}/{{lower_plugin}}/{{lower_name}}') ?>"><?= trans('{{lower_author}}.{{lower_plugin}}::lang.{{snake_plural_name}}.singular') ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -20,29 +20,28 @@
                     data-request="onSave"
                     data-request-data="redirect:0"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Сохранение..."
+                    data-load-indicator="<?= trans('backend::lang.form.saving') ?>"
                     class="btn btn-primary">
-                    Сохранить
+                    <?= trans('backend::lang.form.save') ?>
                 </button>
                 <button
                     type="button"
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Сохранение..."
+                    data-load-indicator="<?= trans('backend::lang.form.saving') ?>"
                     class="btn btn-default">
-                    Сохранить и закрыть
+                    <?= trans('backend::lang.form.save_and_close') ?>
                 </button>
-                <!--<a href="<?= Backend::url('{{lower_author}}/{{lower_plugin}}/{{lower_name}}/create'); ?>?id=<?= $this->vars['formModel']->id ?>" class="btn btn-default">Копировать</a>-->
                 <button
                     type="button"
                     class="oc-icon-trash-o btn-icon danger pull-right"
                     data-request="onDelete"
-                    data-load-indicator="Удаление..."
-                    data-request-confirm="Вы действительно хотите удалить?">
+                    data-load-indicator="<?= trans('backend::lang.form.deleting') ?>"
+                    data-request-confirm="<?= trans('backend::lang.form.confirm_delete') ?>">
                 </button>
                 <span class="btn-text">
-                    или <a href="<?= Backend::url('{{lower_author}}/{{lower_plugin}}/{{lower_name}}') ?>">вернуться</a>
+                    <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('{{lower_author}}/{{lower_plugin}}/{{lower_name}}') ?>"><?= trans('backend::lang.form.cancel') ?></a>
                 </span>
             </div>
         </div>
@@ -52,6 +51,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('{{lower_author}}/{{lower_plugin}}/{{lower_name}}') ?>" class="btn btn-default">Вернуться к списку</a></p>
+    <p><a href="<?= Backend::url('{{lower_author}}/{{lower_plugin}}/{{lower_name}}') ?>" class="btn btn-default"><?= trans('backend::lang.form.return_to_list') ?></a></p>
 
 <?php endif ?>

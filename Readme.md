@@ -1,7 +1,10 @@
-Перевод на русский язык создание контроллеров и моделей
+Scaffold for OctoberCMS
 
-Создание модели:
-`php artisan create:model:wms author.plugin ModelName`
+Create model:
+`php artisan create:model:jexme author.plugin ModelName`
 
-Создание контроллера:
-`php artisan create:controller:wms author.plugin ControllerName`
+Create controller:
+`php artisan create:controller:jexme author.plugin ControllerName`
+
+Create plugin:
+`php artisan create:plugin:jexme author.plugin`

@@ -1,6 +1,10 @@
-<?php namespace Jexme\Scaffold\Classes\Console;
+<?php
 
-class CreateModel extends \October\Rain\Scaffold\Console\CreateModel
+namespace Jexme\Scaffold\Classes\Console;
+
+use October\Rain\Scaffold\Console\CreateModel as CreateModelBase;
+
+class CreateModel extends CreateModelBase
 {
     protected $name = 'create:model:jexme';
 

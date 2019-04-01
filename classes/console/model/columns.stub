@@ -3,8 +3,17 @@
 # ===================================
 
 columns:
-
     id:
-        label: ID
+        label: validation.attributes.id
         searchable: true
-        width: 1%
+        width: 5%
+    is_active:
+        label: validation.attributes.is_active
+        type: switch
+        width: 2%
+    created_at:
+        label: validation.attributes.created_at
+        type: datetime
+    updated_at:
+        label: validation.attributes.updated_at
+        type: datetime

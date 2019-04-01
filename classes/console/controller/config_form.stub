@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Запись
+name: {{lower_author}}.{{lower_plugin}}::lang.{{snake_plural_name}}.singular
 
 # Model Form Field configuration
 form: $/{{lower_author}}/{{lower_plugin}}/models/{{lower_model}}/fields.yaml
@@ -16,16 +16,16 @@ defaultRedirect: {{lower_author}}/{{lower_plugin}}/{{lower_name}}
 
 # Create page
 create:
-    title: Создать
+    title: jexme.scaffold::lang.form.create_title
     redirect: {{lower_author}}/{{lower_plugin}}/{{lower_name}}/update/:id
     redirectClose: {{lower_author}}/{{lower_plugin}}/{{lower_name}}
 
 # Update page
 update:
-    title: Редактировать
+    title: jexme.scaffold::lang.form.update_title
     redirect: {{lower_author}}/{{lower_plugin}}/{{lower_name}}
     redirectClose: {{lower_author}}/{{lower_plugin}}/{{lower_name}}
 
 # Preview page
 preview:
-    title: Предпросмотр
+    title: jexme.scaffold::lang.form.preview_title

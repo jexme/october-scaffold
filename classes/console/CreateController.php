@@ -1,6 +1,10 @@
-<?php namespace Jexme\Scaffold\Classes\Console;
+<?php
 
-class CreateController extends \October\Rain\Scaffold\Console\CreateController
+namespace Jexme\Scaffold\Classes\Console;
+
+use October\Rain\Scaffold\Console\CreateController as CreateControllerBase;
+
+class CreateController extends CreateControllerBase
 {
     protected $name = 'create:controller:jexme';
 
@@ -11,6 +15,7 @@ class CreateController extends \October\Rain\Scaffold\Console\CreateController
         'controller/config_form.stub'      => 'controllers/{{lower_name}}/config_form.yaml',
         'controller/config_list.stub'      => 'controllers/{{lower_name}}/config_list.yaml',
         'controller/config_reorder.stub'   => 'controllers/{{lower_name}}/config_reorder.yaml',
+        'controller/config_relation.stub'  => 'controllers/{{lower_name}}/config_relation.yaml',
         'controller/create.stub'           => 'controllers/{{lower_name}}/create.htm',
         'controller/index.stub'            => 'controllers/{{lower_name}}/index.htm',
         'controller/preview.stub'          => 'controllers/{{lower_name}}/preview.htm',

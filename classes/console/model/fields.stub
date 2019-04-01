@@ -3,9 +3,7 @@
 # ===================================
 
 fields:
-
     is_active:
-        label: Активность
+        label: validation.attributes.is_active
         type: checkbox
         default: 1
-        span: left

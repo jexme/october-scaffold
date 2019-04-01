@@ -1,0 +1,56 @@
+<?php
+
+namespace {{studly_author}}\{{studly_name}};
+
+use Backend\Facades\Backend;
+use System\Classes\PluginBase;
+
+class Plugin extends PluginBase
+{
+    public function register()
+    {
+        //
+    }
+
+    public function boot()
+    {
+        //
+    }
+
+    public function registerComponents()
+    {
+        return []; // Remove this line to activate
+
+        return [
+            '{{studly_author}}\{{studly_name}}\Components\MyComponent' => 'myComponent',
+        ];
+    }
+
+    public function registerPermissions()
+    {
+        return []; // Remove this line to activate
+
+        return [
+            '{{lower_author}}.{{lower_name}}.some_permission' => [
+                'tab'   => '{{name}}',
+                'label' => 'Some permission'
+            ],
+        ];
+    }
+
+    public function registerNavigation()
+    {
+        return []; // Remove this line to activate
+
+        return [
+            '{{lower_name}}' => [
+                'label'       => '{{name}}',
+                'url'         => Backend::url('{{lower_author}}/{{lower_name}}/mycontroller'),
+                'icon'        => 'icon-leaf',
+                'permissions' => ['{{lower_author}}.{{lower_name}}.*'],
+                'order'       => 500,
+                'sideMenu'    => [],
+            ],
+        ];
+    }
+}

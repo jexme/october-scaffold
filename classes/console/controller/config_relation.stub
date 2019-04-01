@@ -1,0 +1,10 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+values:
+  label: Invoice Line Item
+  view:
+    list: $/{{lower_author}}/{{lower_plugin}}/models/{{lower_name}}/columns.yaml
+    toolbarButtons: false
+    recordsPerPage: 10
