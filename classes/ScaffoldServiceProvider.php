@@ -12,11 +12,11 @@ class ScaffoldServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('command.create.model.jexme', function () {
-            return new CreateModel;
+            return new CreateModel();
         });
 
         $this->app->singleton('command.create.controller.jexme', function () {
-            return new CreateController;
+            return new CreateController();
         });
 
         $this->app->singleton('command.create.plugin.jexme', function () {
